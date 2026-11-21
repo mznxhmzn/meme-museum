@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">珊瑚红热梗套图角色</title>
+  <desc id="desc">珊瑚红色猫耳角色张嘴大笑，露出白色牙齿与珊瑚色舌头，身后错叠暖黄色与灰蓝色两张图卡。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <g transform="translate(10 6)">
+    <rect x="300" y="286" width="372" height="372" rx="60" fill="#F2C14E" transform="rotate(-10 486 472)"/>
+    <rect x="310" y="300" width="372" height="372" rx="60" fill="#5B8DB8" transform="rotate(8 496 486)"/>
+    <path d="M366 448 Q356 336 414 286 Q466 344 486 436 Z" fill="#E26D5A"/>
+    <path d="M634 448 Q644 336 586 286 Q534 344 514 436 Z" fill="#E26D5A"/>
+    <path d="M400 424 Q398 356 422 324 Q446 362 454 412 Z" fill="#F2C14E"/>
+    <path d="M600 424 Q602 356 578 324 Q554 362 546 412 Z" fill="#F2C14E"/>
+    <circle cx="500" cy="535" r="185" fill="#E26D5A"/>
+    <path d="M394 508 Q428 476 462 508 Q428 492 394 508 Z" fill="#1F2730"/>
+    <path d="M538 508 Q572 476 606 508 Q572 492 538 508 Z" fill="#1F2730"/>
+    <circle cx="376" cy="566" r="18" fill="#F2C14E"/>
+    <circle cx="624" cy="566" r="18" fill="#F2C14E"/>
+    <path d="M414 584 Q500 552 586 584 Q582 678 500 686 Q418 678 414 584 Z" fill="#1F2730"/>
+    <path d="M430 588 Q500 566 570 588 Q566 606 500 610 Q434 606 430 588 Z" fill="#FFFFFF"/>
+    <ellipse cx="500" cy="666" rx="46" ry="15" fill="#E26D5A"/>
+  </g>
+</svg>

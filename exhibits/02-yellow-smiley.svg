@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">经典圆面笑脸</title>
+  <desc id="desc">暖黄色圆形笑脸，墨色眯眼与上扬嘴角，珊瑚色脸颊，后方错开一枚灰蓝色圆盘。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <circle cx="514" cy="514" r="220" fill="#5B8DB8"/>
+  <circle cx="490" cy="490" r="220" fill="#F2C14E"/>
+  <ellipse cx="414" cy="462" rx="18" ry="23" fill="#1F2730"/>
+  <ellipse cx="566" cy="462" rx="18" ry="23" fill="#1F2730"/>
+  <circle cx="408" cy="454" r="5" fill="#FFFFFF"/>
+  <circle cx="560" cy="454" r="5" fill="#FFFFFF"/>
+  <path d="M406 510 Q490 620 574 510 Q490 566 406 510 Z" fill="#1F2730"/>
+  <circle cx="382" cy="548" r="22" fill="#E26D5A"/>
+  <circle cx="598" cy="548" r="22" fill="#E26D5A"/>
+</svg>

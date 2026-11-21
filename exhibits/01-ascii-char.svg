@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">ASCII 字符笑脸</title>
+  <desc id="desc">墨蓝色方形展签上，用冒号、连字符和右括号组成的白色字符笑脸，下方一道珊瑚色光标。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <rect x="260" y="260" width="480" height="480" rx="64" fill="#1F2730"/>
+  <g fill="#FFFFFF">
+    <rect x="312" y="402" width="52" height="52" rx="6"/>
+    <rect x="312" y="546" width="52" height="52" rx="6"/>
+    <rect x="390" y="474" width="92" height="52" rx="6"/>
+    <path d="M640.4 381.8 A150 150 0 0 1 640.4 618.2 L613.3 583.5 A106 106 0 0 0 613.3 416.5 Z"/>
+  </g>
+  <rect x="430" y="638" width="140" height="16" rx="8" fill="#E26D5A"/>
+</svg>

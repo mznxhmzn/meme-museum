@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">委屈圆脸</title>
+  <desc id="desc">灰蓝色圆形脸，八字眉与下撇嘴角，左眼下一滴白色眼泪，后方错开一枚暖黄色圆盘。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <circle cx="512" cy="512" r="216" fill="#F2C14E"/>
+  <circle cx="488" cy="488" r="216" fill="#5B8DB8"/>
+  <ellipse cx="418" cy="472" rx="16" ry="20" fill="#1F2730"/>
+  <ellipse cx="558" cy="472" rx="16" ry="20" fill="#1F2730"/>
+  <rect x="389" y="413" width="58" height="14" rx="7" fill="#1F2730" transform="rotate(-14 418 420)"/>
+  <rect x="529" y="413" width="58" height="14" rx="7" fill="#1F2730" transform="rotate(14 558 420)"/>
+  <path d="M406 556 Q488 494 570 556 Q488 548 406 556 Z" fill="#1F2730"/>
+  <path d="M396 508 C410 528 412 544 396 544 C380 544 382 528 396 508 Z" fill="#FFFFFF"/>
+</svg>

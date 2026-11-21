@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">蓝色拟人贴纸角色</title>
+  <desc id="desc">灰蓝色圆润的拟人贴纸角色，一只手臂举起挥动，肚皮上一枚暖黄色五角星，脚穿珊瑚色鞋子。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <rect x="412" y="682" width="80" height="46" rx="23" fill="#E26D5A"/>
+  <rect x="508" y="682" width="80" height="46" rx="23" fill="#E26D5A"/>
+  <rect x="269" y="395" width="132" height="60" rx="30" fill="#5B8DB8" transform="rotate(45 335 425)"/>
+  <rect x="608" y="511" width="120" height="58" rx="29" fill="#5B8DB8" transform="rotate(45 668 540)"/>
+  <path d="M500 285 C602 285 660 352 664 446 L668 570 C672 654 606 710 500 710 C394 710 328 654 332 570 L336 446 C340 352 398 285 500 285 Z" fill="#5B8DB8"/>
+  <circle cx="452" cy="444" r="22" fill="#FFFFFF"/>
+  <circle cx="548" cy="444" r="22" fill="#FFFFFF"/>
+  <circle cx="449" cy="443" r="11" fill="#1F2730"/>
+  <circle cx="545" cy="443" r="11" fill="#1F2730"/>
+  <circle cx="410" cy="492" r="18" fill="#E26D5A"/>
+  <circle cx="590" cy="492" r="18" fill="#E26D5A"/>
+  <path d="M460 492 Q500 526 540 492 Q500 514 460 492 Z" fill="#1F2730"/>
+  <path d="M500 566 L511.8 595.8 L543.7 597.8 L519 618.2 L527 649.2 L500 632 L473 649.2 L481 618.2 L456.3 597.8 L488.2 595.8 Z" fill="#F2C14E"/>
+</svg>

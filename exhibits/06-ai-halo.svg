@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI 生成表情</title>
+  <desc id="desc">墨色面孔，左半眉眼平整、右半由白色像素材块打散，外圈一道灰蓝色虚线光圈，几枚暖黄与珊瑚色像素浮在头侧。</desc>
+  <rect width="1000" height="1000" fill="#EDF0F3"/>
+  <circle cx="500" cy="500" r="286" fill="none" stroke="#5B8DB8" stroke-width="9" stroke-dasharray="20 24" stroke-linecap="round"/>
+  <circle cx="500" cy="214" r="11" fill="#F2C14E"/>
+  <circle cx="500" cy="500" r="216" fill="#1F2730"/>
+  <circle cx="436" cy="452" r="26" fill="#FFFFFF"/>
+  <g fill="#FFFFFF">
+    <rect x="538" y="412" width="34" height="34"/>
+    <rect x="574" y="412" width="34" height="34"/>
+    <rect x="538" y="448" width="34" height="34"/>
+    <rect x="574" y="448" width="34" height="34"/>
+    <rect x="414" y="576" width="132" height="28"/>
+    <rect x="556" y="570" width="24" height="24"/>
+    <rect x="588" y="578" width="16" height="16"/>
+    <rect x="682" y="376" width="34" height="34"/>
+    <rect x="646" y="446" width="34" height="34"/>
+    <rect x="682" y="482" width="34" height="34"/>
+    <rect x="646" y="518" width="34" height="34"/>
+    <rect x="646" y="590" width="34" height="34"/>
+    <rect x="610" y="626" width="34" height="34"/>
+    <rect x="574" y="626" width="34" height="34"/>
+  </g>
+  <rect x="610" y="482" width="34" height="34" fill="#E26D5A"/>
+  <rect x="714" y="420" width="16" height="16" fill="#E26D5A"/>
+  <rect x="744" y="492" width="24" height="24" fill="#1F2730"/>
+</svg>
