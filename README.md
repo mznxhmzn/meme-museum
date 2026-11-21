@@ -2,7 +2,7 @@
 
 网络专题网页设计作品：以博物馆展陈的形式，梳理网络情绪符号从 1982 年 ASCII 笑脸到 AI 生成面孔的演化。
 
-在线预览：https://meme-museum.netlify.app
+在线预览：https://meme-museum-mzn.netlify.app
 
 ## 结构
 
