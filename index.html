@@ -1858,6 +1858,252 @@
       }
     }
 
+    /* ── 章节导航 ─────────────────────────────── */
+
+    .chapnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      transform: translateY(-104%);
+      background: rgba(237, 240, 243, 0.93);
+      border-bottom: 1px solid var(--line);
+      transition: transform 0.36s cubic-bezier(0.22, 0.7, 0.28, 1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .chapnav.is-visible {
+      transform: none;
+    }
+
+    .chapnav__inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.6vw, 38px);
+      height: 46px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .chapnav__inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chapnav__link {
+      position: relative;
+      flex: 0 0 auto;
+      padding: 4px 0;
+      color: var(--ink-faint);
+      font-family: var(--sans);
+      font-size: 11.5px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .chapnav__link:hover {
+      color: var(--ink);
+    }
+
+    .chapnav__link.is-active {
+      color: var(--ink);
+    }
+
+    .chapnav__link.is-active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 1.5px;
+      background: var(--ink);
+    }
+
+    .chapnav__link:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .chapnav__bar {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background: var(--ink);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    #hall,
+    #statement,
+    #collection,
+    #mechanisms,
+    #faces,
+    #axes,
+    #refs,
+    #colophon {
+      scroll-margin-top: 62px;
+    }
+
+    /* ── 结句 ─────────────────────────────────── */
+
+    .closing {
+      padding-block: clamp(72px, 9vw, 132px);
+      border-top: 1px solid var(--line);
+    }
+
+    .closing__text {
+      margin: 0;
+      max-width: 22em;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(23px, 2.8vw, 36px);
+      font-weight: 900;
+      line-height: 1.55;
+      letter-spacing: 0.01em;
+      text-wrap: pretty;
+    }
+
+    /* ── 参考资料 ─────────────────────────────── */
+
+    .refs {
+      border-top: 1px solid var(--line);
+      padding-block: clamp(28px, 3.4vw, 44px);
+    }
+
+    .refs__box {
+      margin: 0;
+    }
+
+    .refs__summary {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      padding: 6px 0;
+      cursor: pointer;
+      list-style: none;
+      color: var(--ink);
+    }
+
+    .refs__summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .refs__summary::before {
+      content: "+";
+      flex: 0 0 auto;
+      width: 14px;
+      color: var(--ink-faint);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .refs__box[open] .refs__summary::before {
+      content: "−";
+    }
+
+    .refs__title {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .refs__hint {
+      color: var(--ink-faint);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+    }
+
+    .refs__summary:hover .refs__title {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .refs__summary:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .refs__body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px clamp(24px, 4vw, 64px);
+      padding: 20px 0 8px 30px;
+    }
+
+    .refs__col--wide {
+      grid-column: 1 / -1;
+    }
+
+    .refs__h {
+      margin: 0 0 10px;
+      color: var(--ink-faint);
+      font-family: var(--sans);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .refs__body ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .refs__body li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 7px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .refs__body li::before {
+      content: "";
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+      width: 4px;
+      height: 1px;
+      background: var(--ink-faint);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 760px) {
+      .chapnav__inner {
+        height: 42px;
+        gap: 11px;
+        padding-right: 4px;
+      }
+
+      .chapnav__link {
+        font-size: 10px;
+        letter-spacing: 0.02em;
+      }
+
+      .refs__body {
+        grid-template-columns: minmax(0, 1fr);
+        padding-left: 22px;
+      }
+
+      .refs__hint {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1881,6 +2127,19 @@
     </div>
   </header>
 
+  <nav class="chapnav" id="chapnav" aria-label="章节导航">
+    <div class="shell chapnav__inner">
+      <a class="chapnav__link" href="#hall">序厅</a>
+      <a class="chapnav__link" href="#statement">馆藏说明</a>
+      <a class="chapnav__link" href="#collection">展品目录</a>
+      <a class="chapnav__link" href="#mechanisms">三种机制</a>
+      <a class="chapnav__link" href="#faces">六种面孔</a>
+      <a class="chapnav__link" href="#axes">三个维度</a>
+      <a class="chapnav__link" href="#refs">参考资料</a>
+      <span class="chapnav__bar" aria-hidden="true"></span>
+    </div>
+  </nav>
+
   <main>
     <section class="hero shell" aria-labelledby="hero-title">
       <p class="eyebrow">网络专题 · 从键盘到算法</p>
@@ -1892,7 +2151,7 @@
       <p class="hero__rail" aria-hidden="true">常设展 · 网络情绪符号 · 1982—2026</p>
     </section>
 
-    <section class="hall shell" aria-label="线上展馆现场">
+    <section class="hall shell" id="hall" aria-label="线上展馆现场">
       <figure class="hall__figure">
         <div class="hall__stage">
           <svg viewBox="0 0 2560 1080" preserveAspectRatio="xMinYMid slice" role="img" aria-label="线上展馆现场：六座白色展台，从左至右陈列 1982 年字符笑脸「:-)」、1990 年代颜文字卡片、1999 年 12×12 像素笑脸、2000 年代平台自带黄色圆脸、2010 年代乖巧宝宝与 2024 年黏土滤镜面孔。">
@@ -2066,7 +2325,7 @@
       </figure>
     </section>
 
-    <section class="intro" aria-label="馆藏说明">
+    <section class="intro" id="statement" aria-label="馆藏说明">
       <div class="shell">
         <p class="intro__lead">表情包是聊天的附属品，<br>还是一套在屏幕之间流通的视觉语言？</p>
 
@@ -2084,8 +2343,8 @@
       </div>
     </section>
 
-    <section class="collection shell" id="collection" aria-labelledby="collection-title">
-      <div class="collection__head">
+    <section class="collection shell" aria-labelledby="collection-title">
+      <div class=collection__head id=collection>
         <h2 class="collection__label" id="collection-title">
           <svg class="collection__mark" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
             <defs>
@@ -2410,7 +2669,7 @@
         </article>
       </div>
 
-      <section class="mechanisms" aria-labelledby="mechanisms-title">
+      <section class="mechanisms" id="mechanisms" aria-labelledby="mechanisms-title">
         <div class="mechanisms__head">
           <h3 class="mechanisms__title" id="mechanisms-title">十张脸背后的三种流通机制</h3>
           <span class="mechanisms__en">CURATOR'S NOTE / THREE CIRCULATIONS</span>
@@ -2437,7 +2696,7 @@
         </div>
       </section>
 
-      <section class="faces" aria-labelledby="faces-title">
+      <section class="faces" id="faces" aria-labelledby="faces-title">
         <div class="faces__head">
           <h3 class="faces__title" id="faces-title">同一句，六种面孔</h3>
           <span class="faces__en">ONE LINE / SIX FACES</span>
@@ -2603,7 +2862,7 @@
         </div>
       </section>
 
-      <section class="axes" aria-labelledby="axes-title">
+      <section class="axes" id="axes" aria-labelledby="axes-title">
         <div class="axes__head">
           <h3 class="axes__title" id="axes-title">三个维度</h3>
           <span class="axes__en">THREE AXES</span>
@@ -2627,7 +2886,13 @@
       </section>
     </section>
 
-    <section class="collect" aria-labelledby="collect-title">
+    <section class="closing" aria-label="结语">
+      <div class="shell">
+        <p class="closing__text">四十多年，我们只是把<span class="nowrap">「我没事」</span>，<br>换了一百种说法。</p>
+      </div>
+    </section>
+
+    <section class="collect" id="colophon" aria-labelledby="collect-title">
       <div class="shell collect__inner">
         <div class="collect__copy">
           <h2 class="collect__title" id="collect-title">本馆持续征集</h2>
@@ -2638,6 +2903,49 @@
       </div>
     </section>
   </main>
+
+    <section class="refs" id="refs" aria-labelledby="refs-title">
+      <div class="shell">
+        <details class="refs__box">
+          <summary class="refs__summary">
+            <span class="refs__title" id="refs-title">参考资料与图源</span>
+            <span class="refs__hint">一手材料 / 二手整理 / 图像</span>
+          </summary>
+          <div class="refs__body">
+            <div class="refs__col">
+              <h3 class="refs__h">一手材料</h3>
+              <ul>
+                <li>卡内基·梅隆大学计算机学院档案：Scott E. Fahlman，1982-09-19 BBS 原帖</li>
+                <li>美联社 2007 年关于笑脸符号起源的报道</li>
+                <li>NTT DoCoMo i-mode 服务与绘文字设计资料（栗田穰崇，1999）</li>
+                <li>纽约现代艺术博物馆（MoMA）2016 年 176 枚原始绘文字馆藏说明</li>
+                <li>Unicode Consortium：Emoji 于 2010 年纳入 Unicode 6.0</li>
+                <li>腾讯 QQ 产品史与 OICQ 1999 年上线记录</li>
+                <li>微信表情开放平台公开资料（2016 年起）</li>
+              </ul>
+            </div>
+            <div class="refs__col">
+              <h3 class="refs__h">二手整理</h3>
+              <ul>
+                <li>日本 ASCII NET 时期用语与「顔文字」词源资料</li>
+                <li>网络流传的即时通信黄脸版本对照图（2003 / 2007 / 2011）</li>
+                <li>Know Your Meme：Trollface、Woman Yelling at the Cat 词条</li>
+                <li>萌娘百科：熊猫头、女人骂猫、黏土滤镜条目</li>
+                <li>界面新闻 2024 年 5 月报道；七麦数据 App Store 榜单</li>
+              </ul>
+            </div>
+            <div class="refs__col refs__col--wide">
+              <h3 class="refs__h">图像</h3>
+              <ul>
+                <li>十件展品均为网络原始图像；熊猫头一张已裁去商城横幅，左右面板在原图中本就被裁断</li>
+                <li>ASCII 符号表、颜文字对照表、黄脸版本对照表属网络流传的整理图表，非平台官方发布</li>
+                <li>展品图像版权归各原作者，本页仅作教学展示，不用于任何商业用途</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
 
   <footer class="footer">
     <div class="shell footer__inner">
@@ -2878,6 +3186,61 @@
           first.focus();
         }
       });
+
+      /* ============================================================
+       * 章节导航：滚动出现、高亮当前章、底部进度
+       * ========================================================== */
+      (function chapterNav() {
+        const nav = document.getElementById("chapnav");
+        if (!nav) return;
+        const bar = nav.querySelector(".chapnav__bar");
+        const items = Array.from(nav.querySelectorAll(".chapnav__link"))
+          .map((link) => ({ link, target: document.querySelector(link.getAttribute("href")) }))
+          .filter((item) => item.target);
+        if (!items.length) return;
+
+        let ticking = false;
+
+        function setActive(index) {
+          items.forEach((item, i) => {
+            const on = i === index;
+            item.link.classList.toggle("is-active", on);
+            if (on) item.link.setAttribute("aria-current", "true");
+            else item.link.removeAttribute("aria-current");
+          });
+        }
+
+        function paint() {
+          const y = window.scrollY;
+          const span = document.documentElement.scrollHeight - window.innerHeight;
+
+          nav.classList.toggle("is-visible", y > 520);
+
+          const line = y + 150;
+          let active = 0;
+          items.forEach((item, index) => {
+            if (item.target.getBoundingClientRect().top + y <= line) active = index;
+          });
+          if (span - y < 60) active = items.length - 1;
+          setActive(active);
+
+          if (bar) bar.style.width = span > 0 ? Math.min(100, (y / span) * 100) + "%" : "0%";
+        }
+
+        function onScroll() {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(() => {
+            ticking = false;
+            paint();
+          });
+        }
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        paint();
+      })();
+
     })();
   </script>
 </body>
