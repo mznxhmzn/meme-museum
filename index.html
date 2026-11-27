@@ -2104,6 +2104,296 @@
       }
     }
 
+    /* ── 图鉴 ─────────────────────────────────── */
+
+    .gallery {
+      border-top: 1px solid var(--line);
+      padding-block: clamp(56px, 7vw, 96px);
+    }
+
+    .gallery__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .gallery__title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .gallery__en {
+      color: var(--ink-faint);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+    }
+
+    .gallery__lede {
+      margin: 15px 0 0;
+      max-width: 62ch;
+      color: var(--ink-soft);
+      font-size: 13.5px;
+      line-height: 1.85;
+    }
+
+    .gallery__bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .gallery__search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      max-width: 380px;
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid rgba(31, 39, 48, 0.16);
+      border-radius: 999px;
+      background: var(--card);
+    }
+
+    .gallery__search-icon {
+      color: var(--ink-faint);
+      font-size: 13px;
+      margin-right: 8px;
+    }
+
+    .gallery__search input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 12.5px;
+    }
+
+    .gallery__search input::placeholder {
+      color: var(--ink-faint);
+    }
+
+    .gallery__search:focus-within {
+      border-color: var(--ink);
+      box-shadow: 0 0 0 3px rgba(31, 39, 48, 0.07);
+    }
+
+    .gallery__count {
+      margin: 0;
+      color: var(--ink-faint);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .gallery__filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      appearance: none;
+      padding: 6px 12px;
+      border: 1px solid rgba(31, 39, 48, 0.14);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 11.5px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .chip:hover {
+      border-color: rgba(31, 39, 48, 0.38);
+      color: var(--ink);
+    }
+
+    .chip[aria-pressed="true"] {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .chip:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+    }
+
+    .chip__n {
+      margin-left: 5px;
+      opacity: 0.55;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+      gap: 14px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .gcard {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(31, 39, 48, 0.09);
+      border-radius: 12px;
+      background: var(--card);
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(31, 39, 48, 0.03);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .gcard:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px -18px rgba(31, 39, 48, 0.5);
+    }
+
+    .gcard__figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;
+      padding: 14px;
+      background: #E5E9ED;
+      box-shadow: inset 0 1px 3px rgba(31, 39, 48, 0.06);
+      overflow: hidden;
+    }
+
+    .gcard__figure img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 2px rgba(31, 39, 48, 0.12));
+    }
+
+    .gcard__text {
+      margin: 0;
+      color: var(--ink);
+      font-family: "MS Gothic", "Yu Gothic", "Microsoft YaHei", Consolas, monospace;
+      font-size: 19px;
+      line-height: 1.5;
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .gcard__text--emoji {
+      font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    .gcard__body {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 11px 12px 12px;
+    }
+
+    .gcard__name {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 12.5px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .gcard__tags {
+      margin: 3px 0 0;
+      color: var(--ink-faint);
+      font-size: 10px;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+
+    .gcard__copy {
+      flex: 0 0 auto;
+      padding: 5px 9px;
+      border: 1px solid rgba(31, 39, 48, 0.16);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 10px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .gcard__copy:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .gcard__copy.is-done {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .gcard__copy:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+    }
+
+    .gallery__empty {
+      margin: 40px 0 0;
+      color: var(--ink-faint);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .gallery__note {
+      margin: 26px 0 0;
+      color: var(--ink-faint);
+      font-size: 10.5px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .gallery__bar {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .gallery__search {
+        max-width: none;
+      }
+
+      .gallery__grid {
+        grid-template-columns: repeat(auto-fill, minmax(144px, 1fr));
+        gap: 10px;
+      }
+
+      .gcard__text {
+        font-size: 16px;
+      }
+
+      .gcard__text--emoji {
+        font-size: 34px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2135,6 +2425,7 @@
       <a class="chapnav__link" href="#mechanisms">三种机制</a>
       <a class="chapnav__link" href="#faces">六种面孔</a>
       <a class="chapnav__link" href="#axes">三个维度</a>
+      <a class="chapnav__link" href="#gallery">图鉴</a>
       <a class="chapnav__link" href="#refs">参考资料</a>
       <span class="chapnav__bar" aria-hidden="true"></span>
     </div>
@@ -2886,6 +3177,31 @@
       </section>
     </section>
 
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="gallery__head">
+          <h2 class="gallery__title" id="gallery-title">表情包图鉴</h2>
+          <span class="gallery__en">GALLERY · 42</span>
+        </div>
+        <p class="gallery__lede">按形式和情绪翻，也可以直接搜。颜文字复制的是文本，图片复制的是 PNG；不拦右键，想存就存。</p>
+
+        <div class="gallery__bar">
+          <label class="gallery__search">
+            <span class="gallery__search-icon" aria-hidden="true">⌕</span>
+            <input id="gallery-search" type="search" placeholder="搜索名字、情绪或说明" autocomplete="off" aria-label="搜索表情包">
+          </label>
+          <p class="gallery__count" id="gallery-count" aria-live="polite">42 件</p>
+        </div>
+
+        <div class="gallery__filters" id="gallery-forms" role="group" aria-label="按形式筛选"></div>
+        <div class="gallery__filters" id="gallery-emotions" role="group" aria-label="按情绪筛选"></div>
+
+        <ul class="gallery__grid" id="gallery-grid"></ul>
+        <p class="gallery__empty" id="gallery-empty" hidden>没有匹配的表情包，换个词试试。</p>
+        <p class="gallery__note">图像版权归各原作者，本页仅作教学演示，不做商用。</p>
+      </div>
+    </section>
+
     <section class="closing" aria-label="结语">
       <div class="shell">
         <p class="closing__text">四十多年，我们只是把<span class="nowrap">「我没事」</span>，<br>换了一百种说法。</p>
@@ -3239,6 +3555,234 @@
         window.addEventListener("scroll", onScroll, { passive: true });
         window.addEventListener("resize", onScroll);
         paint();
+      })();
+
+
+      /* ============================================================
+       * 表情包图鉴
+       * ========================================================== */
+      (function gallery() {
+        const grid = document.getElementById("gallery-grid");
+        if (!grid) return;
+
+        const FORM_LABEL = {
+          char: "字符",
+          emoji: "Emoji",
+          platform: "平台表情",
+          photo: "照片与贴纸",
+          ai: "AI 生成",
+        };
+        const EMO_LABEL = {
+          happy: "开心",
+          speechless: "无语",
+          angry: "愤怒",
+          confused: "疑惑",
+          awkward: "尴尬",
+          sad: "悲伤",
+          cheer: "鼓励",
+          sarcasm: "阴阳怪气",
+        };
+
+        const ITEMS = [
+          // ── 字符：颜文字 ──
+          { n: "笑脸", f: "char", e: "happy", t: "(^_^)", d: "最经典的正脸笑，括号当脸颊，下划线当嘴。" },
+          { n: "大笑", f: "char", e: "happy", t: "(^o^)", d: "把小写 o 当嘴，笑得更开。" },
+          { n: "星星眼", f: "char", e: "happy", t: "(≧▽≦)", d: "用两个数学符号当眯起的眼睛，是 2000 年代论坛签名档的常客。" },
+          { n: "满足", f: "char", e: "happy", t: "(´▽｀)", d: "倒三角当嘴，配上扬的眼角，像长舒一口气。" },
+          { n: "难受", f: "char", e: "speechless", t: "(>_<)", d: "眼睛挤成两个尖括号，说不出话的样子。" },
+          { n: "无所谓", f: "char", e: "speechless", t: "(￣▽￣)", d: "两道横线当半睁的眼，是「随便吧」的标准写法。" },
+          { n: "掀桌", f: "char", e: "angry", t: "(╯°□°）╯︵ ┻━┻", d: "用方块字符画出一张被掀翻的桌子，颜文字里最出圈的动作梗。" },
+          { n: "青筋", f: "char", e: "angry", t: "(￣ヘ￣)", d: "ヘ 像皱起的眉，压着火气。" },
+          { n: "抓狂", f: "char", e: "angry", t: "(ﾉಥ益ಥ)ﾉ", d: "两只手举起来、眼睛含泪，是颜文字里的爆发。" },
+          { n: "疑问", f: "char", e: "confused", t: "(・ω・)", d: "小圆点当眼睛，ω 当嘴，一脸茫然。" },
+          { n: "懵", f: "char", e: "confused", t: "(￣□￣;)", d: "张开的方框嘴加一滴汗，愣住的样子。" },
+          { n: "尴尬", f: "char", e: "awkward", t: "(´･ω･`)", d: "眉眼向下耷，配合半角撇号，是「不太妙」的表情。" },
+          { n: "汗", f: "char", e: "awkward", t: "(・_・;)", d: "分号当额头上的汗，日式漫画的用法被搬进字符。" },
+          { n: "流泪", f: "char", e: "sad", t: "(T_T)", d: "两个 T 当竖着的泪眼，最省字的哭脸。" },
+          { n: "哭泣", f: "char", e: "sad", t: "(;_;)", d: "分号当挂在眼角的泪。" },
+          { n: "大哭", f: "char", e: "sad", t: "(´；ω；`)", d: "全角分号把眼泪加粗，哭声更大。" },
+          { n: "应援", f: "char", e: "cheer", t: "(ﾉ◕ヮ◕)ﾉ", d: "举手欢呼，两只小圆眼。" },
+          { n: "打气", f: "char", e: "cheer", t: "(｀・ω・´)", d: "挺胸握拳的姿势，常见于考试前的留言。" },
+          { n: "白眼", f: "char", e: "sarcasm", t: "(¬_¬)", d: "两道斜眉压着眼睛，什么都不用说。" },
+          { n: "鄙视", f: "char", e: "sarcasm", t: "(￣ー￣)", d: "眼睛眯成一条线，嘴角似笑非笑。" },
+
+          // ── 字符：实拍与图表 ──
+          { n: "1982 原帖", f: "char", e: "happy", src: "assets/ascii.jpg", d: "法尔曼在 CMU 的 BBS 上发出的那条提议，一切从这里开始。" },
+          { n: "ASCII 符号表", f: "char", e: "happy", src: "assets/ascii-chart.png", d: "同一套能力被穷举成一整张表，连玫瑰都能拼。" },
+
+          // ── Emoji ──
+          { n: "大笑", f: "emoji", e: "happy", t: "😀", d: "最基础的黄脸，跨平台长得都一样。" },
+          { n: "笑哭", f: "emoji", e: "happy", t: "😂", d: "2015 年起长期占据使用率第一。" },
+          { n: "含泪微笑", f: "emoji", e: "awkward", t: "🥲", d: "笑着说没事，2020 年后才进 Unicode。" },
+          { n: "苦笑", f: "emoji", e: "awkward", t: "😅", d: "一滴汗加一个笑，社交场合的标准缓颊。" },
+          { n: "大哭", f: "emoji", e: "sad", t: "😭", d: "两道瀑布一样的眼泪。" },
+          { n: "生气", f: "emoji", e: "angry", t: "😡", d: "脸色发红，最常见于被冒犯时。" },
+          { n: "冷哼", f: "emoji", e: "angry", t: "😤", d: "鼻孔出气，比 😡 更克制。" },
+          { n: "坏笑", f: "emoji", e: "sarcasm", t: "😏", d: "半边嘴角上扬，什么都懂了。" },
+          { n: "倒脸", f: "emoji", e: "sarcasm", t: "🙃", d: "整张脸倒过来，字面上的「无语」。" },
+          { n: "思考", f: "emoji", e: "confused", t: "🤔", d: "手托下巴，常用于委婉表达反对。" },
+          { n: "睡觉", f: "emoji", e: "speechless", t: "😴", d: "对方说了废话时的标准回复。" },
+          { n: "爆炸", f: "emoji", e: "speechless", t: "🤯", d: "脑袋炸开，信息过载的样子。" },
+
+          // ── 平台表情 ──
+          { n: "i-mode 绘文字", f: "platform", e: "happy", src: "assets/imode.jpg", d: "栗田穰崇画的 176 枚 12×12 图标，emoji 的原型。" },
+          { n: "平台三代黄脸", f: "platform", e: "speechless", src: "assets/qq-yellow.jpg", d: "同一套黄脸 2003、2007、2011 的三次改版。" },
+
+          // ── 照片与贴纸 ──
+          { n: "女人骂猫", f: "photo", e: "angry", src: "assets/cat.jpg", d: "2019 年，两段无关画面被拼成一场争吵。" },
+          { n: "熊猫头", f: "photo", e: "sarcasm", src: "assets/panda.jpg", d: "黑白轮廓加真人表情，脸和台词可以分开换。" },
+          { n: "暴走脸", f: "photo", e: "sarcasm", src: "assets/trollface.jpg", d: "2008 年 Carlos Ramirez 的线稿，英文互联网的嘲讽脸。" },
+          { n: "乖巧宝宝", f: "photo", e: "cheer", src: "assets/baobao.jpg", d: "2016 年钟超能画的白色小人，替人说出软话。" },
+
+          // ── AI 生成 ──
+          { n: "黏土滤镜", f: "ai", e: "happy", src: "assets/clay.jpg", d: "2024 年五一，Remini 把真人照片捏成陶土小人。" },
+          { n: "AI 毛绒狗", f: "ai", e: "speechless", src: "assets/ai-dog.jpg", d: "一句描述就能生成一整套风格统一的表情。" },
+        ];
+
+        const state = { form: "all", emotion: "all", q: "" };
+
+        const formBox = document.getElementById("gallery-forms");
+        const emoBox = document.getElementById("gallery-emotions");
+        const countEl = document.getElementById("gallery-count");
+        const emptyEl = document.getElementById("gallery-empty");
+        const searchEl = document.getElementById("gallery-search");
+
+        function tally(key) {
+          const map = {};
+          ITEMS.forEach((item) => { map[item[key]] = (map[item[key]] || 0) + 1; });
+          return map;
+        }
+
+        function buildChips(box, key, labels, allLabel) {
+          const counts = tally(key);
+          const total = ITEMS.length;
+          const make = (value, label, count) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "chip";
+            button.dataset.value = value;
+            button.setAttribute("aria-pressed", String(value === "all"));
+            button.textContent = label;
+            const n = document.createElement("span");
+            n.className = "chip__n";
+            n.textContent = count;
+            button.appendChild(n);
+            button.addEventListener("click", () => {
+              state[key === "f" ? "form" : "emotion"] = value;
+              box.querySelectorAll(".chip").forEach((chip) => {
+                chip.setAttribute("aria-pressed", String(chip.dataset.value === value));
+              });
+              render();
+            });
+            return button;
+          };
+          box.appendChild(make("all", allLabel, total));
+          Object.keys(labels).forEach((value) => {
+            if (counts[value]) box.appendChild(make(value, labels[value], counts[value]));
+          });
+        }
+
+        buildChips(formBox, "f", FORM_LABEL, "全部形式");
+        buildChips(emoBox, "e", EMO_LABEL, "全部情绪");
+
+        function matches(item) {
+          if (state.form !== "all" && item.f !== state.form) return false;
+          if (state.emotion !== "all" && item.e !== state.emotion) return false;
+          if (!state.q) return true;
+          const hay = [item.n, item.d, item.t || "", FORM_LABEL[item.f], EMO_LABEL[item.e]].join(" ").toLowerCase();
+          return hay.indexOf(state.q) >= 0;
+        }
+
+        function card(item) {
+          const li = document.createElement("li");
+          li.className = "gcard";
+
+          const figure = document.createElement("div");
+          figure.className = "gcard__figure";
+          if (item.t) {
+            const p = document.createElement("p");
+            p.className = "gcard__text" + (item.f === "emoji" ? " gcard__text--emoji" : "");
+            p.textContent = item.t;
+            if (item.f !== "emoji") {
+              const size = Math.max(11, Math.min(24, Math.round(210 / Math.max(4, item.t.length) * 1.15)));
+              p.style.fontSize = size + "px";
+            }
+            figure.appendChild(p);
+          } else {
+            const img = document.createElement("img");
+            img.src = item.src;
+            img.alt = item.n;
+            img.loading = "lazy";
+            img.decoding = "async";
+            figure.appendChild(img);
+          }
+
+          const body = document.createElement("div");
+          body.className = "gcard__body";
+          const info = document.createElement("div");
+          const name = document.createElement("p");
+          name.className = "gcard__name";
+          name.textContent = item.n;
+          const tags = document.createElement("p");
+          tags.className = "gcard__tags";
+          tags.textContent = FORM_LABEL[item.f] + " · " + EMO_LABEL[item.e];
+          info.append(name, tags);
+
+          const copy = document.createElement("button");
+          copy.type = "button";
+          copy.className = "gcard__copy";
+          copy.textContent = item.t ? "复制" : "复制图";
+          copy.addEventListener("click", () => doCopy(item, copy));
+
+          body.append(info, copy);
+          li.append(figure, body);
+          return li;
+        }
+
+        function render() {
+          const list = ITEMS.filter(matches);
+          grid.replaceChildren(...list.map(card));
+          countEl.textContent = list.length + " 件";
+          emptyEl.hidden = list.length > 0;
+        }
+
+        async function doCopy(item, button) {
+          const original = button.textContent;
+          try {
+            if (item.t) {
+              await navigator.clipboard.writeText(item.t);
+            } else {
+              const img = new Image();
+              img.src = item.src;
+              await new Promise((resolve, reject) => {
+                img.onload = resolve;
+                img.onerror = reject;
+              });
+              const canvas = document.createElement("canvas");
+              canvas.width = img.naturalWidth;
+              canvas.height = img.naturalHeight;
+              canvas.getContext("2d").drawImage(img, 0, 0);
+              const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+              if (!blob || !navigator.clipboard || !window.ClipboardItem) throw new Error("unsupported");
+              await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+            }
+            button.textContent = "已复制";
+            button.classList.add("is-done");
+          } catch (error) {
+            button.textContent = item.t ? "复制失败" : "请右键另存";
+          }
+          window.setTimeout(() => {
+            button.textContent = original;
+            button.classList.remove("is-done");
+          }, 1600);
+        }
+
+        searchEl.addEventListener("input", () => {
+          state.q = searchEl.value.trim().toLowerCase();
+          render();
+        });
+
+        render();
       })();
 
     })();
