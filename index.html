@@ -2198,6 +2198,49 @@
       white-space: nowrap;
     }
 
+    .gallery__selects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 14px;
+    }
+
+    .gfield {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gfield__label {
+      color: var(--ink-faint);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+    }
+
+    .gfield__select {
+      appearance: none;
+      -webkit-appearance: none;
+      min-width: 168px;
+      padding: 8px 32px 8px 12px;
+      border: 1px solid rgba(31, 39, 48, 0.16);
+      border-radius: 8px;
+      background-color: var(--card);
+      background-image: linear-gradient(45deg, transparent 50%, var(--ink-faint) 50%), linear-gradient(135deg, var(--ink-faint) 50%, transparent 50%);
+      background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .gfield__select:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+    }
+
     .gallery__filters {
       display: flex;
       flex-wrap: wrap;
@@ -2394,6 +2437,211 @@
       }
     }
 
+    /* ── 发展历程 ─────────────────────────────── */
+
+    .history {
+      border-top: 1px solid var(--line);
+      padding-block: clamp(52px, 6.4vw, 88px);
+    }
+
+    .history__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .history__title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .history__en {
+      color: var(--ink-faint);
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+    }
+
+    .history__lede {
+      margin: 18px 0 0;
+      max-width: 64ch;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.95;
+      text-wrap: pretty;
+    }
+
+    .history__lede b {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .era-list {
+      margin: clamp(30px, 4vw, 46px) 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .era-block {
+      display: grid;
+      grid-template-columns: 168px minmax(0, 1fr);
+      gap: clamp(24px, 4vw, 64px);
+      padding: clamp(26px, 3.4vw, 40px) 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .era-block__side {
+      display: grid;
+      align-content: start;
+      gap: 6px;
+    }
+
+    .era-block__no {
+      color: var(--ink-faint);
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.18em;
+    }
+
+    .era-block__year {
+      font-family: var(--serif);
+      font-size: clamp(24px, 2.2vw, 31px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .era-block__name {
+      color: var(--ink-soft);
+      font-size: 11.5px;
+      letter-spacing: 0.1em;
+    }
+
+    .era-block__glyph {
+      margin-top: 8px;
+      color: rgba(31, 39, 48, 0.16);
+      font-family: "MS Gothic", "Yu Gothic", var(--sans);
+      font-size: 30px;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+    }
+
+    .era-block__body {
+      min-width: 0;
+    }
+
+    .era-block__hook {
+      margin: 0 0 12px;
+      font-family: var(--serif);
+      font-size: clamp(17px, 1.6vw, 21px);
+      font-weight: 900;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+
+    .era-block__why {
+      margin: 0;
+      max-width: 60ch;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.95;
+      text-wrap: pretty;
+    }
+
+    .era-block__traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+      margin: 16px 0 0;
+    }
+
+    .era-block__traits > div {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .era-block__traits dt {
+      color: var(--ink-faint);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+    }
+
+    .era-block__traits dd {
+      margin: 0;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .era-block__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .era-chip {
+      padding: 5px 11px;
+      border: 1px solid rgba(31, 39, 48, 0.14);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 11px;
+      line-height: 1.3;
+      cursor: pointer;
+      transition: border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .era-chip:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .era-chip:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 760px) {
+      .era-block {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 22px 0 26px;
+      }
+
+      .era-block__side {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .era-block__no {
+        order: 3;
+        margin-left: auto;
+      }
+
+      .era-block__glyph {
+        display: none;
+      }
+
+      .era-block__why {
+        font-size: 14px;
+        line-height: 1.9;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2421,7 +2669,7 @@
     <div class="shell chapnav__inner">
       <a class="chapnav__link" href="#hall">序厅</a>
       <a class="chapnav__link" href="#statement">馆藏说明</a>
-      <a class="chapnav__link" href="#collection">展品目录</a>
+      <a class="chapnav__link" href="#history">发展历程</a>
       <a class="chapnav__link" href="#mechanisms">三种机制</a>
       <a class="chapnav__link" href="#faces">六种面孔</a>
       <a class="chapnav__link" href="#axes">三个维度</a>
@@ -2635,76 +2883,114 @@
     </section>
 
     <section class="collection shell" aria-labelledby="collection-title">
-      <div class=collection__head id=collection>
-        <h2 class="collection__label" id="collection-title">
-          <svg class="collection__mark" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
-            <defs>
-              <mask id="collection-mark-lens-window" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000">
-                <rect width="1000" height="1000" fill="#FFFFFF"/>
-                <circle cx="603.75" cy="559.7" r="105" fill="#000000"/>
-              </mask>
-            </defs>
-            <g fill="none" stroke="#1F2730" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
-              <g mask="url(#collection-mark-lens-window)">
-                <g transform="translate(388.75 398.7) rotate(-8)">
-                  <rect x="-175" y="-135" width="350" height="270" rx="28"/>
-                  <line x1="-105" y1="-39" x2="95" y2="-39"/>
-                  <line x1="-105" y1="33" x2="23" y2="33"/>
-                </g>
-              </g>
-              <circle cx="603.75" cy="559.7" r="125"/>
-              <line x1="692.15" y1="648.1" x2="799.75" y2="755.7"/>
-            </g>
-          </svg>
-          展品目录
-          <span class="collection__label-en">COLLECTION / 01—10</span>
-        </h2>
-        <p class="result" aria-live="polite" aria-atomic="true">
-          <span id="result-scope">全展</span>
-          <span class="result__slash" aria-hidden="true">/</span>
-          <span class="result__count" id="result-count">10</span>
-          <span>件</span>
-        </p>
-      </div>
-
-      <div class="filters" role="group" aria-label="按年代筛选展品">
-        <button class="filters__all is-active" type="button" data-filter="all" aria-pressed="true" aria-controls="exhibit-grid">全展</button>
-        <div class="eras" role="group" aria-label="年代时间轴">
-          <button class="era" type="button" data-filter="char" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">1982</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">文字字符期</span>
-          </button>
-          <button class="era" type="button" data-filter="kao" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">1990s</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">颜文字期</span>
-          </button>
-          <button class="era" type="button" data-filter="emoji" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">1999</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">绘文字期</span>
-          </button>
-          <button class="era" type="button" data-filter="im" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">2000s</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">平台表情期</span>
-          </button>
-          <button class="era" type="button" data-filter="meme" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">2010s</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">网络表情包期</span>
-          </button>
-          <button class="era" type="button" data-filter="ai" aria-pressed="false" aria-controls="exhibit-grid">
-            <span class="era__year">2024</span>
-            <span class="era__dot" aria-hidden="true"></span>
-            <span class="era__name">AI 生成期</span>
-          </button>
+    <section class="history" id="history" aria-labelledby="history-title">
+      <div class="shell">
+        <div class="history__head">
+          <h2 class="history__title" id="history-title">发展历程</h2>
+          <span class="history__en">THE LINE · 六个时期</span>
         </div>
+        <p class="history__lede">这张脸不是越画越精致，而是被一次次技术限制推着改。下面六段，每段只回答两件事：<b>它为什么必须变</b>，以及<b>变了之后长什么样</b>。</p>
+
+        <ol class="era-list">
+          <li class="era-block" id="era-1982">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">01</span>
+              <span class="era-block__year">1982</span>
+              <span class="era-block__name">文字字符期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">一个玩笑被读成实验报告</h3>
+              <p class="era-block__why">1980 年代初，卡内基·梅隆计算机系的 BBS 上大多是严肃讨论。有人开玩笑，被当成真的结论，惹出麻烦。要解决的不是「怎么表达情绪」，而是「怎么让人知道我是在开玩笑」——而键盘上只有 95 个可显示字符，方案只能从这些符号里长出来。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>纯文本终端</dd></div><div><dt>阅读</dt><dd>侧头 90°</dd></div><div><dt>门槛</dt><dd>会敲三个键</dd></div><div><dt>代表</dt><dd>:-) :-( ;-)</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="0">笑脸符号 :-)</button>
+              <button class="era-chip" type="button" data-exhibit-index="1">ASCII 符号表</button>
+              </div>
+            </div>
+          </li>
+          <li class="era-block" id="era-1990s">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">02</span>
+              <span class="era-block__year">1990s</span>
+              <span class="era-block__name">颜文字期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">换一套编码，脸就正过来了</h3>
+              <p class="era-block__why">1986 年，若林泰志用 (^_^) 当签名——括号当脸颊、下划线当嘴。它能成立不是因为灵感，而是因为 Shift_JIS 有全角字符：括号和下划线都占两个字宽，可以当笔画用。欧美只有半角 ASCII，画不出正面脸，只能继续攒横向表情。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>BBS 签名、邮件、MSN</dd></div><div><dt>阅读</dt><dd>正面</dd></div><div><dt>门槛</dt><dd>记住几个全角符号</dd></div><div><dt>代表</dt><dd>(T_T) (・ω・) (≧▽≦)</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="2">颜文字 (^_^)</button>
+              </div>
+            </div>
+          </li>
+          <li class="era-block" id="era-1999">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">03</span>
+              <span class="era-block__year">1999</span>
+              <span class="era-block__name">绘文字期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">一条短信只能装 250 个字</h3>
+              <p class="era-block__why">i-mode 的短信限 250 个字符，用颜文字会挤占正文。NTT 需要一套「不用打字就能发出去」的图。栗田穰崇只有 5 周和 12×12 的格子，于是 176 枚图标被压到极简：矩形嘴、倒 V 字眼——再细一格就画不下了。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>手机屏 12×12</dd></div><div><dt>形态</dt><dd>彩色像素、系统内置</dd></div><div><dt>门槛</dt><dd>零，点一下</dd></div><div><dt>代表</dt><dd>176 枚原始绘文字</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="3">i-mode 绘文字</button>
+              </div>
+            </div>
+          </li>
+          <li class="era-block" id="era-2000s">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">04</span>
+              <span class="era-block__year">2000s</span>
+              <span class="era-block__name">平台表情期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">平台把这张脸收进了客户端</h3>
+              <p class="era-block__why">即时通讯普及后，表情成了产品的一部分。2003 年 QQ 支持在聊天里直接显示图片，用户把论坛里的 P 图搬进聊天框；平台随后补上自定义表情、表情漫游。表情的作者从网友变成公司，也就有了版本号——同一套黄脸，2003、2007、2011 各改一次画法。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>QQ / MSN 客户端</dd></div><div><dt>形态</dt><dd>位图、可自定义</dd></div><div><dt>门槛</dt><dd>点一下</dd></div><div><dt>代表</dt><dd>QQ 黄脸三代</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="4">平台自带表情</button>
+              </div>
+            </div>
+          </li>
+          <li class="era-block" id="era-2010s">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">05</span>
+              <span class="era-block__year">2010s</span>
+              <span class="era-block__name">网络表情包期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">一张空白的脸，谁都能用</h3>
+              <p class="era-block__why">社交平台让「图」成了通用货币。熊猫头把脸和台词拆成两个可替换的部件——轮廓不动，表情随便换，配一句话就是一张新梗。格式一旦确立，做一张的成本降到三分钟。2016 年微信表情开放平台上线，表情可以上架、可以被赞赏。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>微博 / 微信 / 贴吧</dd></div><div><dt>形态</dt><dd>黑白模板 + 真人表情</dd></div><div><dt>门槛</dt><dd>三分钟</dd></div><div><dt>代表</dt><dd>乖巧宝宝、女人骂猫</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="5">熊猫头</button>
+              <button class="era-chip" type="button" data-exhibit-index="6">乖巧宝宝</button>
+              <button class="era-chip" type="button" data-exhibit-index="7">女人骂猫</button>
+              </div>
+            </div>
+          </li>
+          <li class="era-block" id="era-2020s">
+            <div class="era-block__side">
+              <span class="era-block__no" aria-hidden="true">06</span>
+              <span class="era-block__year">2020s</span>
+              <span class="era-block__name">AI 生成期</span>
+            </div>
+            <div class="era-block__body">
+              <h3 class="era-block__hook">原件消失了</h3>
+              <p class="era-block__why">前面每个时期都要先有一张「原件」：一张截图、一张画、一张照片。文生图把这步也省了——一句描述就能生成一整套风格统一的表情。2024 年五一，Remini 的黏土滤镜把真人照片捏成陶土小人，5 月 1 日冲到中国区 iOS 免费榜第一。</p>
+              <dl class="era-block__traits"><div><dt>媒介</dt><dd>App / 模型</dd></div><div><dt>形态</dt><dd>成套、风格统一</dd></div><div><dt>门槛</dt><dd>一句话</dd></div><div><dt>代表</dt><dd>黏土滤镜、AI 毛绒狗</dd></div></dl>
+              <div class="era-block__chips">
+              <button class="era-chip" type="button" data-exhibit-index="8">黏土滤镜</button>
+              <button class="era-chip" type="button" data-exhibit-index="9">AI 生成表情包</button>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
 
-      <div class="grid grid--hero" id="exhibit-grid">
-        <article class="card" data-era="char" data-source="资料：卡内基·梅隆大学计算机学院档案、美联社 2007 年报道；图像为 1982-09-19 原始 BBS 消息的终端截图（今日头条历史资料页转引），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「笑脸符号 :-)」的展品拆解">
+      <div class="exhibit-data" id="exhibit-data" hidden>
+<article class="card" data-era="char" data-source="资料：卡内基·梅隆大学计算机学院档案、美联社 2007 年报道；图像为 1982-09-19 原始 BBS 消息的终端截图（今日头条历史资料页转引），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「笑脸符号 :-)」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 01</span>
             <img class="card__img" src="assets/ascii.jpg" loading="eager" alt="1982 年 9 月 19 日，Scott E. Fahlman 在 CMU 电子布告栏发布的笑脸符号原始消息截图，绿色终端字，内容提议用「:-)」标记玩笑。" width="750" height="375" decoding="async">
@@ -2728,8 +3014,7 @@
             <li>黑底绿字、等宽字符，是早期终端阅读经验的直接痕迹。</li>
           </template>
         </article>
-
-        <article class="card" data-era="char" data-source="资料：1982 年后 ASCII 表情在电子邮件与 BBS 上的扩散记录、早期网络表情符号汇编；图像为网络流传的 ASCII 表情符号表，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「ASCII 表情符号表」的展品拆解">
+<article class="card" data-era="char" data-source="资料：1982 年后 ASCII 表情在电子邮件与 BBS 上的扩散记录、早期网络表情符号汇编；图像为网络流传的 ASCII 表情符号表，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「ASCII 表情符号表」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 02</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/ascii-chart.png" alt="ASCII 表情符号表：白底黑字四列排布，上排是 :-{ }、:'( 、:-# 、8-) 等变体，中排是 :-)、:-(、:-/、:-0，下排是 ;-)、:-D、:-x 与一朵用字符拼出的玫瑰 @}-,-'--。" width="768" height="534" decoding="async">
@@ -2753,8 +3038,7 @@
             <li>「玫瑰」这种非表情符号说明：这套系统的边界不是情绪，而是「能不能用字符画出来」。</li>
           </template>
         </article>
-
-        <article class="card" data-era="kao" data-source="资料：日本「顔文字」词源与 ASCII-NET 时期用语、2ch 草创期颜文字用法、MSN Messenger 时期的中文网络习惯；图像为依据常见颜文字排版重绘的示意图（非原版截图），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「颜文字」的展品拆解">
+<article class="card" data-era="kao" data-source="资料：日本「顔文字」词源与 ASCII-NET 时期用语、2ch 草创期颜文字用法、MSN Messenger 时期的中文网络习惯；图像为依据常见颜文字排版重绘的示意图（非原版截图），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「颜文字」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 03</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/kaomoji.jpg" alt="颜文字对照表：日本颜文字与英文释义并列，如 (^_^) smile、(T_T) tears、(>_<) ouch、(・ω・) 等，共六行五列。" width="640" height="550" decoding="async">
@@ -2778,8 +3062,7 @@
             <li>高矮胖瘦全靠字符密度，表情的「身材」其实由排版决定。</li>
           </template>
         </article>
-
-        <article class="card" data-era="emoji" data-source="资料：NTT DoCoMo i-mode 资料、MoMA 2016 年馆藏说明、nippon.com；图像为 1999 年 176 枚绘文字总览（MoMA 收藏资料，haoemoji / domusweb 转载），版权归 NTT DoCoMo，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「i-mode 绘文字」的展品拆解">
+<article class="card" data-era="emoji" data-source="资料：NTT DoCoMo i-mode 资料、MoMA 2016 年馆藏说明、nippon.com；图像为 1999 年 176 枚绘文字总览（MoMA 收藏资料，haoemoji / domusweb 转载），版权归 NTT DoCoMo，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「i-mode 绘文字」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 04</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/imode.jpg" alt="NTT DoCoMo 1999 年 i-mode 绘文字原始 176 枚 12×12 像素图标总览，白底，彩色图标按行排列。" width="1600" height="657" decoding="async">
@@ -2803,8 +3086,7 @@
             <li>白底总览保留的是图标库的目录形态，而不是某一部手机的界面。</li>
           </template>
         </article>
-
-        <article class="card" data-era="im" data-source="资料：腾讯 QQ 产品史与 1999 年 OICQ 上线记录、MSN Messenger 表情资料；图像为依据 2000 年代平台自带黄脸重绘的示意图（非原版截图，不含任何平台素材），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「平台自带表情」的展品拆解">
+<article class="card" data-era="im" data-source="资料：腾讯 QQ 产品史与 1999 年 OICQ 上线记录、MSN Messenger 表情资料；图像为依据 2000 年代平台自带黄脸重绘的示意图（非原版截图，不含任何平台素材），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「平台自带表情」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 05</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/qq-yellow.jpg" alt="平台自带黄脸的三个版本对照：2003 年的像素化黄脸、2007 年的圆润版、2011 年的拟物高光版，三组表情按年份自上而下排列。" width="512" height="504" decoding="async">
@@ -2830,8 +3112,7 @@
             <li>从这一代开始，表情的作者从「网友」变成了「公司」。</li>
           </template>
         </article>
-
-        <article class="card" data-era="meme" data-source="资料：暴走漫画在中国的传播史、金馆长（崔成国）与「食屎啦你」截图的流变、萌娘百科「熊猫头」条目；图像为表情包合集截图（已裁去商城横幅，保留底部两组面板），版权归各原作者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「熊猫头」的展品拆解">
+<article class="card" data-era="meme" data-source="资料：暴走漫画在中国的传播史、金馆长（崔成国）与「食屎啦你」截图的流变、萌娘百科「熊猫头」条目；图像为表情包合集截图（已裁去商城横幅，保留底部两组面板），版权归各原作者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「熊猫头」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 06</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/panda.jpg" alt="熊猫头表情包合集：黑白熊猫轮廓里嵌入各种真人表情，配上「做个人吧」「停止你的表演」「上班8小时7小时群里聊天」「这是什么神仙操作」等台词，两行排列。" width="800" height="316" decoding="async">
@@ -2855,8 +3136,7 @@
             <li>表情和台词是分离的两个部件，同一张脸可以配无数句话——这是它能被大量二创的结构原因。</li>
           </template>
         </article>
-
-        <article class="card" data-era="meme" data-source="资料：微信表情开放平台、新京报 2017 年对钟超能的采访、南方都市报 2017-12-17 报道；图像为「乖巧宝宝」表情包面板（GirlStyle 合集转载），作者钟超能，版权归原作者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「乖巧宝宝」的展品拆解">
+<article class="card" data-era="meme" data-source="资料：微信表情开放平台、新京报 2017 年对钟超能的采访、南方都市报 2017-12-17 报道；图像为「乖巧宝宝」表情包面板（GirlStyle 合集转载），作者钟超能，版权归原作者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「乖巧宝宝」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 07</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/baobao.jpg" alt="乖巧宝宝微信表情包面板，十二格白色小人贴纸，包含「乖巧」「晚安」「ok」「快吃」等字样。" width="756" height="589" decoding="async">
@@ -2881,8 +3161,7 @@
             <li>面板式排布说明它按“整套表情”分发，而不是一张孤立的图片。</li>
           </template>
         </article>
-
-        <article class="card" data-era="meme" data-source="资料：萌娘百科「女人骂猫」、British Council 梗图说明、Smudge 原图 2018-06-19、合成图 2019-05-01；图像为 2019-05-01 @MISSINGEGIRL 发布的原版合成图（meme.com / imgflip 转载），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「女人骂猫」的展品拆解">
+<article class="card" data-era="meme" data-source="资料：萌娘百科「女人骂猫」、British Council 梗图说明、Smudge 原图 2018-06-19、合成图 2019-05-01；图像为 2019-05-01 @MISSINGEGIRL 发布的原版合成图（meme.com / imgflip 转载），仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「女人骂猫」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 08</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/cat.jpg" alt="女人骂猫原版合成图：左栏 Taylor Armstrong 在节目中哭喊指责，右栏白猫 Smudge 面对一盘蔬菜。" width="700" height="360" decoding="async">
@@ -2907,8 +3186,7 @@
             <li>电视截图与日常照片的质感并排保留，拼贴痕迹本身成了语法。</li>
           </template>
         </article>
-
-        <article class="card" data-era="ai" data-source="资料：界面新闻 2024-05、七麦数据、百度百科「黏土滤镜」；图像为 Remini App 内 Before/After 对比截图（perfectcorp 文章转载），版权归 Remini，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「黏土滤镜」的展品拆解">
+<article class="card" data-era="ai" data-source="资料：界面新闻 2024-05、七麦数据、百度百科「黏土滤镜」；图像为 Remini App 内 Before/After 对比截图（perfectcorp 文章转载），版权归 Remini，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「黏土滤镜」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 09</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/clay.jpg" alt="Remini 黏土滤镜 App 内 Before/After 对比截图，左侧真人照片，右侧陶土质感效果，底部有 Clay、Jade、Old Anime、Toon、Paint 缩略图。" width="720" height="720" decoding="async">
@@ -2933,8 +3211,7 @@
             <li>Remini 顶栏和 App 外壳被保留，截图本身就是产品证据。</li>
           </template>
         </article>
-
-        <article class="card" data-era="ai" data-source="资料：2024—2025 年中文社交平台上的 AI 生成表情包现象、文生图模型的公开能力说明；图像为 AI 生成表情包合集截图（毛绒质感的狗形象与配文），版权归生成者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「AI 生成表情包」的展品拆解">
+<article class="card" data-era="ai" data-source="资料：2024—2025 年中文社交平台上的 AI 生成表情包现象、文生图模型的公开能力说明；图像为 AI 生成表情包合集截图（毛绒质感的狗形象与配文），版权归生成者，仅作教学展示。" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="exhibit-drawer" aria-label="查看「AI 生成表情包」的展品拆解">
           <div class="card__figure">
             <span class="card__no" aria-hidden="true">NO. 10</span>
             <img class="card__img" loading="lazy" decoding="async" src="assets/ai-dog.jpg" alt="AI 生成表情包合集：同一只毛绒质感的小狗出现在十二种场景里，配有「汲取知识」「要饭」「痛苦面具」「哥哥扶我」「装死」「头脑发热」等台词，四行三列排列。" width="780" height="599" decoding="async">
@@ -2959,6 +3236,7 @@
           </template>
         </article>
       </div>
+    </section>
 
       <section class="mechanisms" id="mechanisms" aria-labelledby="mechanisms-title">
         <div class="mechanisms__head">
@@ -3007,7 +3285,7 @@
               <span class="face__name">字符版</span>
               <span class="face__medium">1982 · ASCII</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="char" aria-controls="exhibit-grid" aria-label="筛选并查看文字字符期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-1982" aria-label="跳到 1982 文字字符期"></button>
           </figure>
           <figure class="face">
             <div class="face__art">
@@ -3024,7 +3302,7 @@
               <span class="face__name">颜文字版</span>
               <span class="face__medium">1990s · 全角</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="kao" aria-controls="exhibit-grid" aria-label="筛选并查看颜文字期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-1990s" aria-label="跳到 1990s 颜文字期"></button>
           </figure>
           <figure class="face">
             <div class="face__art">
@@ -3076,7 +3354,7 @@
               <span class="face__name">圆脸版</span>
               <span class="face__medium">1999 · 12px</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="emoji" aria-controls="exhibit-grid" aria-label="筛选并查看绘文字期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-1999" aria-label="跳到 1999 绘文字期"></button>
           </figure>
           <figure class="face">
             <div class="face__art">
@@ -3095,7 +3373,7 @@
               <span class="face__name">平台版</span>
               <span class="face__medium">2000s · QQ</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="im" aria-controls="exhibit-grid" aria-label="筛选并查看平台表情期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-2000s" aria-label="跳到 2000s 平台表情期"></button>
           </figure>
           <figure class="face">
             <div class="face__art">
@@ -3120,7 +3398,7 @@
               <span class="face__name">热梗版</span>
               <span class="face__medium">2019 · 骂猫</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="meme" aria-controls="exhibit-grid" aria-label="筛选并查看网络表情包期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-2010s" aria-label="跳到 2010s 网络表情包期"></button>
           </figure>
           <figure class="face">
             <div class="face__art">
@@ -3148,7 +3426,7 @@
               <span class="face__name">AI 版</span>
               <span class="face__medium">2024 · 黏土</span>
             </figcaption>
-            <button class="face__pick" type="button" data-face-filter="ai" aria-controls="exhibit-grid" aria-label="筛选并查看 AI 生成期展品"></button>
+            <button class="face__pick" type="button" data-era-jump="era-2020s" aria-label="跳到 2020s AI 生成期"></button>
           </figure>
         </div>
       </section>
@@ -3193,8 +3471,16 @@
           <p class="gallery__count" id="gallery-count" aria-live="polite">42 件</p>
         </div>
 
-        <div class="gallery__filters" id="gallery-forms" role="group" aria-label="按形式筛选"></div>
-        <div class="gallery__filters" id="gallery-emotions" role="group" aria-label="按情绪筛选"></div>
+        <div class="gallery__selects">
+          <label class="gfield">
+            <span class="gfield__label">形式</span>
+            <select id="filter-form" class="gfield__select"></select>
+          </label>
+          <label class="gfield">
+            <span class="gfield__label">情绪</span>
+            <select id="filter-emotion" class="gfield__select"></select>
+          </label>
+        </div>
 
         <ul class="gallery__grid" id="gallery-grid"></ul>
         <p class="gallery__empty" id="gallery-empty" hidden>没有匹配的表情包，换个词试试。</p>
@@ -3314,47 +3600,7 @@
 
   <script>
     (() => {
-      const filters = Array.from(document.querySelectorAll("[data-filter]"));
-      const cards = Array.from(document.querySelectorAll(".card"));
-      const grid = document.getElementById("exhibit-grid");
-      const scope = document.getElementById("result-scope");
-      const count = document.getElementById("result-count");
-      const labels = {
-        all: "全展",
-        char: "文字字符期",
-        kao: "颜文字期",
-        emoji: "绘文字期",
-        im: "平台表情期",
-        meme: "网络表情包期",
-        ai: "AI 生成期"
-      };
-
-      function applyFilter(key) {
-        let visibleCount = 0;
-
-        cards.forEach((card) => {
-          const visible = key === "all" || card.dataset.era === key;
-          card.hidden = !visible;
-          if (visible) visibleCount += 1;
-        });
-
-        filters.forEach((button) => {
-          const active = button.dataset.filter === key;
-          button.classList.toggle("is-active", active);
-          button.setAttribute("aria-pressed", String(active));
-        });
-
-        scope.textContent = labels[key] || labels.all;
-        count.textContent = String(visibleCount).padStart(2, "0");
-
-        grid.classList.toggle("grid--hero", key === "all");
-        grid.classList.toggle("grid--two", visibleCount === 2);
-        grid.classList.toggle("grid--one", visibleCount === 1);
-      }
-
-      filters.forEach((button) => {
-        button.addEventListener("click", () => applyFilter(button.dataset.filter));
-      });
+      const cards = Array.from(document.querySelectorAll("#exhibit-data .card"));
 
       const drawer = document.getElementById("exhibit-drawer");
       const drawerBody = drawer.querySelector(".drawer__body");
@@ -3373,16 +3619,22 @@
       ].filter(Boolean);
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-      const facePicks = Array.from(document.querySelectorAll("[data-face-filter]"));
-      facePicks.forEach((button) => {
+      Array.from(document.querySelectorAll("[data-era-jump]")).forEach((button) => {
         button.addEventListener("click", () => {
-          applyFilter(button.dataset.faceFilter);
-          const firstVisible = cards.find((card) => !card.hidden);
-          grid.scrollIntoView({
+          const target = document.getElementById(button.dataset.eraJump);
+          if (!target) return;
+          target.scrollIntoView({
             behavior: reduceMotion.matches ? "auto" : "smooth",
-            block: "start"
+            block: "start",
           });
-          if (firstVisible) firstVisible.focus({ preventScroll: true });
+        });
+      });
+
+      // 年代里的展品胶囊 → 打开五问抽屉
+      Array.from(document.querySelectorAll("[data-exhibit-index]")).forEach((button) => {
+        button.addEventListener("click", () => {
+          const card = cards[Number(button.dataset.exhibitIndex)];
+          if (card) openDrawer(card);
         });
       });
 
@@ -3653,37 +3905,26 @@
           return map;
         }
 
-        function buildChips(box, key, labels, allLabel) {
+        const formSel = document.getElementById("filter-form");
+        const emoSel = document.getElementById("filter-emotion");
+
+        function fillSelect(select, key, labels, allLabel) {
           const counts = tally(key);
           const total = ITEMS.length;
-          const make = (value, label, count) => {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "chip";
-            button.dataset.value = value;
-            button.setAttribute("aria-pressed", String(value === "all"));
-            button.textContent = label;
-            const n = document.createElement("span");
-            n.className = "chip__n";
-            n.textContent = count;
-            button.appendChild(n);
-            button.addEventListener("click", () => {
-              state[key === "f" ? "form" : "emotion"] = value;
-              box.querySelectorAll(".chip").forEach((chip) => {
-                chip.setAttribute("aria-pressed", String(chip.dataset.value === value));
-              });
-              render();
-            });
-            return button;
+          const add = (value, label, count) => {
+            const option = document.createElement("option");
+            option.value = value;
+            option.textContent = label + "（" + count + "）";
+            select.appendChild(option);
           };
-          box.appendChild(make("all", allLabel, total));
+          add("all", allLabel, total);
           Object.keys(labels).forEach((value) => {
-            if (counts[value]) box.appendChild(make(value, labels[value], counts[value]));
+            if (counts[value]) add(value, labels[value], counts[value]);
           });
         }
 
-        buildChips(formBox, "f", FORM_LABEL, "全部形式");
-        buildChips(emoBox, "e", EMO_LABEL, "全部情绪");
+        fillSelect(formSel, "f", FORM_LABEL, "全部形式");
+        fillSelect(emoSel, "e", EMO_LABEL, "全部情绪");
 
         function matches(item) {
           if (state.form !== "all" && item.f !== state.form) return false;
@@ -3776,6 +4017,16 @@
             button.classList.remove("is-done");
           }, 1600);
         }
+
+        formSel.addEventListener("change", () => {
+          state.form = formSel.value;
+          render();
+        });
+
+        emoSel.addEventListener("change", () => {
+          state.emotion = emoSel.value;
+          render();
+        });
 
         searchEl.addEventListener("input", () => {
           state.q = searchEl.value.trim().toLowerCase();
